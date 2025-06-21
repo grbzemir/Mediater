@@ -2,11 +2,19 @@
 
 namespace MediaterExample.Med.Queries
 {
-    public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, GetProductByIdViewModel>
+    public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, GetProductViewModel>
     {
-        public Task<GetProductByIdViewModel> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
+        public Task<GetProductViewModel> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var viewModel = new GetProductViewModel
+            {
+                Id = Guid.NewGuid(), 
+                Name = "Naruto",
+                Quantity = 10,
+                Amount = 100.50m
+            };
+
+            return Task.FromResult(viewModel);
         }
     }
 }
