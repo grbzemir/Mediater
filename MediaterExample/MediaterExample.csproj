@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Med\Commands\" />
-    <Folder Include="Med\Queries\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
